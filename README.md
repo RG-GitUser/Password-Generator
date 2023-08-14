@@ -18,6 +18,17 @@ When the user runs through the prompts, they are given the required unique passw
 
 ## Usage 
 
+Here we can understand how the functionallity of generating a random password works. 
+
 Below is an example of code that generates the random password: 
 
 ![sampleCode](https://github.com/RG-GitUser/Password-Generator/blob/main/sampleCode.jpg)
+
+
+## Credits
+
+JavaScript reference links: 
+
+https://developer.mozilla.org/
+
+https://devdocs.io/

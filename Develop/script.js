@@ -23,31 +23,35 @@ function generatePassword() {
   var NUMBERS = "123456789";
 
   // password criteria
-  var passwordLength = prompt("select a password between 8 and 128 characters");
+  var passwordLength = prompt("Select a number to determine the length of your password - This number must be between 8 and 128 charachters.");
   console.log(isNaN(passwordLength))
-  if(isNaN(passwordLength)) {
+  if (isNaN(passwordLength)) {
     alert("Must be a number")
     return;
-  
+
   }
 
 
 
-  if (passwordLength <8) {
+
+  if (passwordLength < 8) {
     alert("Please pick a number greater than 8")
     return;
   }
 
-  if (passwordLength >128) {
+  if (passwordLength > 128) {
     alert("Please pick a number less than 128")
     return;
   }
+
+
   var useUppercase = confirm("Do you want uppercase characters?");
   var useLowercase = confirm("Do you want to use lowercase characters?");
   var useSymbols = confirm("Do you want to use symbols?");
   var useNumbers = confirm("Do you want to use numbers?");
+  var useNumbers = confirm("Your password will now be generated using numbers.");
 
-  var validCharacters = ""; 
+  var validCharacters = "";
   if (useUppercase === true) {
     // useUppercase == true -> "true" || true
     // "11" == 11 -> true
@@ -90,13 +94,20 @@ function generatePassword() {
   // ensure length is a number and not a string
   passwordLength = parseInt(passwordLength);
 
+var randomNumber = "randomNumber"
   // start; stop condition; pace;
   for (var i = 0; i < passwordLength; i++) {
+    var randomNumber = Math.floor(Math.random() * NUMBERS.length);
+    password += NUMBERS.substring(randomNumber, randomNumber +1);
+  
+
+
+
     // how to select a character at a position in a string (index)
     console.log(i)
 
 
-  
+
     // how to randamly get a decimal (float) between 0-1
     // mulitply the float times the length of the string
     // round down the decimal 
@@ -104,10 +115,10 @@ function generatePassword() {
     // select a character in string using index
     // add the randomw character to the password variable 
 
-    
+
   }
 
-  return password; 
+  return password;
 }
 
 
